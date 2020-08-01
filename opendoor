@@ -1,0 +1,14 @@
+but = stageModel.getSolidObject(0).rootPrimitive.find("./but");
+f=0;
+EHbut=MouseEventHandler();
+EHbut.setFilterOnClick(but);
+EHbut.onEvent = function(mouseEvent,what){
+  if(f==0){
+   door.position = danch2.position;
+   f=1;
+  }
+  else{
+   door.position = danch1.position;
+   f=0;
+  }
+}

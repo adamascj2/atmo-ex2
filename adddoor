@@ -1,0 +1,20 @@
+danch1 = stageModel.getSolidObject(0).rootPrimitive.find("./dir");
+danch2 = stageModel.getSolidObject(0).rootPrimitive.find("./esq");
+
+door = Model("./door.aer").add();
+door.position = danch1.position;
+
+addAnimator(door);
+
+timestep=function(){
+ if(door.loaded){
+     
+    door.physicalModel = door.createPhysicalModel(200);
+     
+    door.physicalModel.collide = true;
+    door.physicalModel.fixed = true;
+    
+     
+  }
+}
+ 
